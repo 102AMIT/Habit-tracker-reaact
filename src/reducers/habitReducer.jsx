@@ -15,9 +15,7 @@ const months = [
     "DEC",
   ];
   
-  const d0 = new Date();
-  const month0 = months[d0.getMonth()];
-  const date0 = d0.getDate();
+  
 
   var d1 = new Date(Date.now() - 864e5);
   const month1 = months[d1.getMonth()];
@@ -146,7 +144,7 @@ export function habitsReducer(state = initialHabitsState, action) {
     var updatedWeekdays = [] ;  
      state.list.map((elem) =>{
          if(elem.id === action.id){
-              updatedWeekdays = elem.weekdays.map((item , index)=>(
+              updatedWeekdays =  elem.weekdays.map((item , index)=>(
                 index === action.index
                 ? { ...item, doneStatus : action.doneStatus }
                 : item 
