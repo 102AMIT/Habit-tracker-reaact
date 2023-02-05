@@ -33,7 +33,7 @@ const HabitCard = (props) => {
             </span>
           </div>
           <div>
-          <i className="fa-solid fa-trash" onClick={handleDeleteHabit}></i>
+          <i className="fa-solid fa-trash " onClick={handleDeleteHabit} style={{cursor:"pointer"}}></i>
           </div>
 
         </div>
